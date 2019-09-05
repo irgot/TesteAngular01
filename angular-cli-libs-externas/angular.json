@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "diretivas01": {
+    "angular-cli-libs-externas": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/diretivas01",
+            "outputPath": "dist/angular-cli-libs-externas",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -27,9 +27,11 @@
               "src/styles.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": ["node_modules/jquery/dist/jquery.js",
-                        "node_modules/tether/dist/js/tether.min.js",
-                        "node_modules/bootstrap/dist/js/bootstrap.min.js"]
+            "scripts": [
+              "node_modules/jquery/dist/jquery.js",
+              "node_modules/tether/dist/js/tether.js",
+              "node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -66,18 +68,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "diretivas01:build"
+            "browserTarget": "angular-cli-libs-externas:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "diretivas01:build:production"
+              "browserTarget": "angular-cli-libs-externas:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "diretivas01:build"
+            "browserTarget": "angular-cli-libs-externas:build"
           }
         },
         "test": {
@@ -114,21 +116,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "diretivas01:serve"
+            "devServerTarget": "angular-cli-libs-externas:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "diretivas01:serve:production"
+              "devServerTarget": "angular-cli-libs-externas:serve:production"
             }
           }
         }
       }
-    }
-  },
-  "defaultProject": "diretivas01",
-  "schematics": {
-    "@schematics/angular:component": {
-      "styleext": "css"
-    }
-  }
+    }},
+  "defaultProject": "angular-cli-libs-externas"
 }

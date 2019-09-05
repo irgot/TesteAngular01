@@ -1,0 +1,18 @@
+<h5>Styles</h5>
+<button
+    [style.backgroundColor]="ativo?'blue':'gray'"
+    [style.color]="ativo?'white':'black'"
+    [style.fontWeight]="ativo?'bold':'normal'"
+    [style.fontSize]="tamanhoFonte  + 'px'"
+(click)="mudarAtivo()">Mudar ativo </button>
+
+<br>
+
+<input type="text" [(ngModel)]="tamanhoFonte">
+<br>
+<button [ngStyle]="{'backgroundColor':ativo? 'blue':'green',
+                     'color':ativo?'white':'black',
+                    'fontWeight':ativo?'bold':'normal',
+                    'fontSize':tamanhoFonte+'px'}"
+        (click)="mudarAtivo()">Mudar Ativo 2</button>
+
